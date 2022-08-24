@@ -1,0 +1,61 @@
+
+$LockBtnWidth:90px;
+.submitListBtn{
+    position: absolute;
+    height: 32px;
+    // margin-left: -48px;
+    width: $LockBtnWidth;
+    bottom: 100px;
+    left: 222px;
+    background: none;
+    border:1px solid $themeOrange;
+    border-radius: 5px;
+    color: $themeOrange;
+    cursor: pointer;
+    &:hover{
+        background: $themeOrange;
+        color: #fff;
+    }
+}
+.edit_dialog_content{
+    // width: 620px;
+}
+.choise_top{
+    border: 1px solid $borderBlack;
+    @include theme-border-color;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    .choise_left{
+        width: 20%;
+        float: left;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        // color: $themeContentColor;
+        @include theme-content-color;
+    }
+    .choise_right{
+        float: left;
+        width: 80%;
+        p{
+            border-left: 1px solid $borderBlack; 
+            @include theme-border-color;
+            padding:5px 10px;
+            color: $textGrayColor;
+            span{
+                // color: $themeContentColor;
+                @include theme-content-color;
+            }
+        }
+    }
+}
+.transfer_text{
+    .el-checkbox__inner{
+        background: none;
+        // border-color: $borderColor;
+        @include theme-border-color;
+    }
+}

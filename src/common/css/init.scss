@@ -1,0 +1,523 @@
+// 默认主题
+
+$hearderBg:#1b202f;
+$textGrayColor:#8e96ac;
+$textGrayColor2:#333333;
+$textGrayColor3:#686F7C;
+$textBlackColor:#1B1E25;
+$textBlueColor:#3C66ED;
+$textWhiteColor:#fff;
+$textBlackColor:#000;
+$themeOrange:#ff5900;
+$themeOrangeHover:#FF6918;
+$themeRed:#FF3131;
+$themeHoverRed:#FF4343;
+$themeGreen:#00C087;
+$themeGreenHover:#01C871;
+$leftMenuBg:#111821;
+$themeContentBg:#252c3e;
+$themeContentColor:#D7D7D7;
+$tableLineBg:#1c2232;
+$menuBtnBg:#4B5167;
+$borderBlack:#101012;
+$borderColor:#454C5F;
+$borderGray:#56637D;
+$borderGray2:#505B6E;
+$borderGray3:#6a7cb5;
+$tableHeaderBg:#27355d;
+$tableHeaderColor:#bfc8d8;
+$blackContentBg:#131315;
+$blackHeaderBg:#24272C;
+$headerTitle:#353A4A;
+$themeGrayHover:#3A4155;
+$themeGrayHover2:#E2E5ED;
+$themeGrayHover3:#B4BDD6;
+$themeGrayDisabled:#333848;
+$textPlaceholder:#6F758B;
+$textPlaceholder2:#A5ACBE;
+
+$themeColor:#2458a7;
+$themeHoverColor:#2b64b9;
+
+// 调度中心
+$statusColorRed:#ff3131;
+$statusColorYellow:#ffba00;
+$statusColorBlue:#00a6ff;
+$statusColorGreen:#06de9e;
+$statusColorGray:#60696f;
+
+$headerTitle2:#E7EAF2;
+$marginContentBg:#F2F2F2;
+$themeGrayBorder:#C6C8D2;
+$tableHerderBg2:#EEF3FF;
+$tableLineBg2:#F4F8FF;
+
+
+// 切换headerTitle
+@mixin header-title-bg($important:null){
+  background:$headerTitle $important;
+  [data-theme="theme1"] & {
+    background:$headerTitle $important;
+  }
+  [data-theme="theme2"] & {
+    background:$headerTitle2 $important; 
+  }
+}
+
+// 切换headerTitle
+@mixin header-title-bg-hover($important:null){
+  background:$themeGrayHover $important;
+  [data-theme="theme1"] & {
+    background:$themeGrayHover $important;
+  }
+  [data-theme="theme2"] & {
+    background:$themeGrayHover2 $important; 
+  }
+}
+
+// header-menu
+@mixin header-menu-bg($important:null){
+  background:$menuBtnBg $important;
+  [data-theme="theme1"] & {
+    background:$menuBtnBg $important;
+  }
+  [data-theme="theme2"] & {
+    background:$textWhiteColor $important; 
+  }
+}
+
+// 填充背景
+@mixin theme-content-bg($important:null){
+  background:$themeContentBg $important;
+  [data-theme="theme1"] & {
+    background: $themeContentBg $important;
+  }
+  [data-theme="theme2"] & {
+    background: $textWhiteColor $important; 
+  }
+}
+// 主题颜色
+@mixin theme-content-color($important:null){
+  color:$themeContentColor $important;
+  [data-theme="theme1"] & {
+    color:$themeContentColor $important;
+  }
+  [data-theme="theme2"] & {
+    color:$headerTitle $important;
+  }
+}
+
+// 输入框提示字体颜色
+@mixin text-placeholder($important:null){
+  color:$textPlaceholder $important;
+  [data-theme="theme1"] & {
+    color:$textPlaceholder $important;
+  }
+  [data-theme="theme2"] & {
+    color:$textPlaceholder2 $important;
+  }
+}
+
+// 填充背景
+@mixin content-margin-bg($important:null){
+  background:$hearderBg $important;
+  [data-theme="theme1"] & {
+    background: $hearderBg $important;
+  }
+  [data-theme="theme2"] & {
+    background: $marginContentBg $important; 
+  }
+}
+
+// 填充背景
+@mixin theme-border-color($important:null){
+  border-color:$borderBlack $important;
+  [data-theme="theme1"] & {
+    border-color:$borderBlack $important;
+  }
+  [data-theme="theme2"] & {
+    border-color:$themeGrayBorder $important; 
+  }
+}
+
+// 填充背景
+@mixin theme-border-bg($important:null){
+  background:$borderBlack $important;
+  [data-theme="theme1"] & {
+    background:$borderBlack $important;
+  }
+  [data-theme="theme2"] & {
+    background:$themeGrayBorder $important; 
+  }
+}
+
+// 填充背景
+@mixin theme-search-border($important:null){
+  border-color:$borderColor $important;
+  [data-theme="theme1"] & {
+    border-color:$borderColor $important;
+  }
+  [data-theme="theme2"] & {
+    border-color:$themeGrayBorder $important; 
+  }
+}
+
+// 填充背景
+@mixin table-header-bg($important:null){
+  background:$tableHeaderBg $important;
+  [data-theme="theme1"] & {
+    background: $tableHeaderBg $important;
+  }
+  [data-theme="theme2"] & {
+    background: $tableHerderBg2 $important; 
+  }
+}
+
+@mixin table-header-color($important:null){
+  color:$tableHeaderColor $important;
+  [data-theme="theme1"] & {
+    color:$tableHeaderColor $important;
+  }
+  [data-theme="theme2"] & {
+    color:$headerTitle $important;
+  }
+}
+
+// 填充背景
+@mixin table-line-bg($important:null){
+  background:$tableLineBg $important;
+  [data-theme="theme1"] & {
+    background: $tableLineBg $important;
+  }
+  [data-theme="theme2"] & {
+    background: $tableLineBg2 $important; 
+  }
+}
+// 填充背景
+@mixin date-picker-disable-bg($important:null){
+  background: $headerTitle $important;
+  [data-theme="theme1"] & {
+    background: $headerTitle $important;
+  }
+  [data-theme="theme2"] & {
+    background: #EBEFF7 $important; 
+  }
+}
+
+// 填充背景
+@mixin date-picker-disable-border($important:null){
+  border-color: $headerTitle $important;
+  [data-theme="theme1"] & {
+    border-color: $headerTitle $important;
+  }
+  [data-theme="theme2"] & {
+    border-color: #EBEFF7 $important; 
+  }
+}
+
+
+// 填充背景
+@mixin disabled-btn-bg-color($important:null){
+  background:$themeGrayDisabled $important;
+  color: rgba($themeContentColor,0.3);
+  [data-theme="theme1"] & {
+    background: $themeGrayDisabled $important;
+    color: rgba($themeContentColor,0.3) $important;
+  }
+  [data-theme="theme2"] & {
+    background: #EBEFF7 $important; 
+    color: rgba($headerTitle,0.3) $important;
+  }
+}
+
+// 左边菜单背景
+@mixin left-menu-bg($important:null){
+  background:$leftBtn $important;
+  [data-theme="theme1"] & {
+    background: $leftMenuBg $important;
+  }
+  [data-theme="theme2"] & {
+    background: $textWhiteColor $important; 
+  }
+}
+
+
+// 地图以及调度中心
+@mixin gridding-line($important:null){
+  background: $hearderBg url("~@/common/images/map_bg.png") 0 0 repeat !important;
+  [data-theme="theme1"] & {
+    background: $hearderBg url("~@/common/images/map_bg.png") 0 0 repeat !important;
+    // background-image: linear-gradient(#131621 1px,transparent 0),linear-gradient(90deg, #131621 1px,transparent 0);
+  }
+  [data-theme="theme2"] & {
+  // background-image: linear-gradient(#56637D 1px,transparent 0),linear-gradient(90deg, #56637D 1px,transparent 0);
+    background: $tableLineBg2 url("~@/common/images/map_bg2.png") 0 0 repeat !important;
+  }
+}
+
+
+// 地图以及调度中心
+@mixin incline-table-line($important:null){
+  background: $tableHeaderBg url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxsaW5lIHgxPSIwIiB5MT0iMCIgeDI9IjEwMCUiIHkyPSIxMDAlIiBzdHJva2U9IiNlM2UzZTMiIHN0cm9rZS13aWR0aD0iMSIvPjwvc3ZnPg==);
+  [data-theme="theme1"] & {
+    background: $tableHeaderBg url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxsaW5lIHgxPSIwIiB5MT0iMCIgeDI9IjEwMCUiIHkyPSIxMDAlIiBzdHJva2U9IiNlM2UzZTMiIHN0cm9rZS13aWR0aD0iMSIvPjwvc3ZnPg==);
+  }
+  [data-theme="theme2"] & {
+    background: $tableHerderBg2 url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxsaW5lIHgxPSIwIiB5MT0iMCIgeDI9IjEwMCUiIHkyPSIxMDAlIiBzdHJva2U9IiNlM2UzZTMiIHN0cm9rZS13aWR0aD0iMSIvPjwvc3ZnPg==);
+  }
+}
+
+// 调度中心\集成监视开始--------
+// 集成监视数字
+@mixin device-type-num-bg($important:null){
+  background:$hearderBg $important;
+  [data-theme="theme1"] & {
+    background: $hearderBg $important;
+  }
+  [data-theme="theme2"] & {
+    background: $textGrayColor $important; 
+  }
+}
+// 集成监视卡车
+@mixin device-type-name-color($important:null){
+  color:$textGrayColor $important;
+  [data-theme="theme1"] & {
+    color: $textGrayColor $important;
+  }
+  [data-theme="theme2"] & {
+    color: $headerTitle $important; 
+  }
+}
+// 填充背景
+@mixin dispatch-device-header-bg($important:null){
+  background:$hearderBg $important;
+  [data-theme="theme1"] & {
+    background: $hearderBg $important;
+  }
+  [data-theme="theme2"] & {
+    background: $headerTitle2 $important; 
+  }
+}
+// 填充背景
+@mixin dispatch-device-content-bg($important:null){
+  background:$tableHeaderBg $important;
+  [data-theme="theme1"] & {
+    background: $tableHeaderBg $important;
+  }
+  [data-theme="theme2"] & {
+    background: $textWhiteColor $important; 
+  }
+}
+// 调度中心箭头
+@mixin dispatch-header-right-bg($important:null){
+  background:$themeContentBg $important;
+  [data-theme="theme1"] & {
+    background: $themeContentBg $important;
+  }
+  [data-theme="theme2"] & {
+    background: $headerTitle2 $important; 
+  }
+}
+// 调度中心横线、等待区边框颜色
+@mixin dispatch-line-border-color($important:null){
+  border-color:$borderGray $important;
+  [data-theme="theme1"] & {
+    border-color: $borderGray $important;
+  }
+  [data-theme="theme2"] & {
+    border-color: $borderGray3 $important; 
+  }
+}
+// popper__arrow弹出箭头
+@mixin border-top-color($important:null){
+  border-top-color:$headerTitle $important;
+  [data-theme="theme1"] & {
+    border-top-color: $headerTitle $important;
+  }
+  [data-theme="theme2"] & {
+    border-top-color: $headerTitle2 $important; 
+  }
+}
+// popper__arrow弹出箭头
+@mixin border-bottom-color($important:null){
+  border-bottom-color:$headerTitle $important;
+  [data-theme="theme1"] & {
+    border-bottom-color: $headerTitle $important;
+  }
+  [data-theme="theme2"] & {
+    border-bottom-color: $textWhiteColor $important; 
+  }
+}
+
+// 切换headerTitle
+@mixin select-dropdown-bg($important:null){
+  background:$headerTitle $important;
+  [data-theme="theme1"] & {
+    background:$headerTitle $important;
+  }
+  [data-theme="theme2"] & {
+    background:$textWhiteColor $important; 
+  }
+}
+
+// 填充背景
+@mixin select-dropdown-active($important:null){
+  background:$themeContentBg $important;
+  [data-theme="theme1"] & {
+    background: $themeContentBg $important;
+  }
+  [data-theme="theme2"] & {
+    background: $marginContentBg $important; 
+  }
+}
+
+
+// 填充背景
+@mixin device-detail-bg($important:null){
+  background:$hearderBg $important;
+  [data-theme="theme1"] & {
+    background: $hearderBg $important;
+  }
+  [data-theme="theme2"] & {
+    background: $textWhiteColor $important; 
+  }
+}
+
+// 填充背景
+@mixin device-detail-bg-bg($important:null){
+  background:$tableHeaderBg $important;
+  [data-theme="theme1"] & {
+    background: $tableHeaderBg $important;
+  }
+  [data-theme="theme2"] & {
+    background: $borderGray3 $important; 
+  }
+}
+
+// 填充背景
+@mixin device-detail-header-color($important:null){
+  color:$marginContentBg $important;
+  [data-theme="theme1"] & {
+    color: $marginContentBg $important;
+  }
+  [data-theme="theme2"] & {
+    color: $textWhiteColor $important; 
+  }
+}
+
+
+// 调度中心结束--------
+
+// 视频等弹框
+@mixin video-header-bg($important:null){
+  background:$blackHeaderBg $important;
+  [data-theme="theme1"] & {
+    background: $blackHeaderBg $important;
+  }
+  [data-theme="theme2"] & {
+    background: $headerTitle2 $important; 
+  }
+}
+@mixin video-content-bg($important:null){
+  background:rgba($blackContentBg,.9) $important;
+  [data-theme="theme1"] & {
+    background: rgba($blackContentBg,.9) $important;
+  }
+  [data-theme="theme2"] & {
+    background: rgba($textWhiteColor,.9) $important; 
+  }
+}
+@mixin video-header-bg1($important:null){
+  background:$blackContentBg $important;
+  [data-theme="theme1"] & {
+    background: $blackContentBg $important;
+  }
+  [data-theme="theme2"] & {
+    background: $headerTitle2 $important; 
+  }
+}
+@mixin video-content-bg1($important:null){
+  background:rgba($blackHeaderBg,.9) $important;
+  [data-theme="theme1"] & {
+    background: rgba($blackHeaderBg,.9) $important;
+  }
+  [data-theme="theme2"] & {
+    background: rgba($textWhiteColor,.9) $important; 
+  }
+}
+
+// 作业管理
+@mixin working-nav-active($important:null){
+  background:$hearderBg $important;
+  [data-theme="theme1"] & {
+    background: $hearderBg $important;
+  }
+  [data-theme="theme2"] & {
+    background: rgba($color: $themeOrange, $alpha: 0.1) $important; 
+  }
+}
+
+@mixin working-nav-active-color($important:null){
+  color:$textWhiteColor $important;
+  [data-theme="theme1"] & {
+    color: $textWhiteColor $important;
+  }
+  [data-theme="theme2"] & {
+    color: $themeOrange $important; 
+  }
+}
+
+
+
+@mixin theme-scrollbar($important){
+  background:rgba(27, 32, 47, .9) $important;
+  [data-theme="theme1"] & {
+    background: rgba(27,32,47,.9) $important;
+  }
+  [data-theme="theme2"] & {
+    background: rgba(242, 242, 242, .9) $important; 
+  }
+}
+
+
+// 导航高度
+$headerHeight: 70px;
+$leftMenuWidth:230px;
+$leftMenuThin:50px;
+$navMenuHeight:30px;
+
+// 面包屑的高度
+$breadcrumbHeight:40px;
+
+// 内容到边上的距离
+$marginWidth:20px;
+// 内容列表上面的搜索高度
+$searchHeight:50px;
+
+// @media screen and (max-width: 1400px) {
+//   $leftMenuWidth:260px;
+// }
+
+
+// 一行显示，多余显示省略号
+@mixin no-line {
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  overflow:hidden;
+ }
+
+ // flex布局
+@mixin display-flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+
+
+// 滚动条
+@mixin scrollbar-style{
+  overflow: auto;
+  scrollbar-width: thin;
+}
+
